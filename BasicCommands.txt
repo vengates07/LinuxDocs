@@ -1,0 +1,80 @@
+[10:34 AM] Senthil, Srividhya
+    
+~$ pwd
+/home/user
+~$ mkdir newdir1 newdir2
+~$ ls
+2021-02-12-101717.term newdir1 newdir2
+~$ touch filenew
+~$ cat > filenew
+unix is the multitasking OS
+^Z
+[1]+ Stopped cat > filenew
+~$ cat filename
+cat: filename: No such file or directory
+~$ cat filenew
+unix is the multitasking OS
+~$ ls
+2021-02-12-101717.term filenew newdir1 newdir2
+~$ rmdir newdir
+rmdir: failed to remove 'newdir': No such file or directory
+~$ rmdir newdir1
+~$ ls
+2021-02-12-101717.term filenew newdir2
+~$ mv filenew newdir2
+~$ ls
+2021-02-12-101717.term newdir2
+~$ ls newdir2
+filenew
+~$ cat newdir2/filenew
+unix is the multitasking OS
+~$ cat filenew
+cat: filenew: No such file or directory
+~$ ls
+s
+2021-02-12-101717.term newdir2
+~$ ls
+2021-02-12-101717.term newdir2
+~$ rmdir newdir2
+rmdir: failed to remove 'newdir2': Directory not empty
+~$ rm -i newdir2
+rm: cannot remove 'newdir2': Is a directory
+~$ rm -ri newdir2
+rm: descend into directory 'newdir2'? y
+rm: remove regular file 'newdir2/filenew'? y
+rm: remove directory 'newdir2'? y
+~$ ls
+2021-02-12-101717.term
+~$ mkdir newdir1 newdir2
+~$ touch filenew
+~$ cat > filenew
+thisis a new file
+^Z
+[2]+ Stopped cat > filenew
+~$ ls
+2021-02-12-101717.term filenew newdir1 newdir2
+~$ cp filenew newdir1
+~$ ls newdir1
+filenew
+~$ cat newdir1/filenew
+thisis a new file
+~$ rm -rf newdir1
+~$ ls
+2021-02-12-101717.term filenew newdir2
+~$ cd newdir2
+~/newdir2$ pwd
+/home/user/newdir2
+~/newdir2$ vi filew1
+~/newdir2$ cat filew1
+this is a file
+~/newdir2$ pwd
+/home/user/newdir2
+~/newdir2$ cd ..
+~$ pwd
+/home/user
+~$ cd /
+/$ pwd
+/
+/$ cd ~
+~$ pwd
+/home/user
